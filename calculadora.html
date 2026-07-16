@@ -167,7 +167,7 @@
       <div class="divider2"></div>
       <div class="ctrl">
         <label>Costo base de plataformas / mes</label>
-        <div class="nf" style="margin-top:8px"><span class="pfx">$</span><input type="number" id="plat" min="0" step="5" value="150" oninput="calc()"><span style="color:var(--muted);font-size:14px">/ mes</span></div>
+        <div class="nf" style="margin-top:8px"><span class="pfx">$</span><input type="number" id="plat" min="0" step="5" value="200" oninput="calc()"><span style="color:var(--muted);font-size:14px">/ mes</span></div>
         <div class="hlp">Voz, telefonía, mensajería, agenda. Es el mismo costo en ambos escenarios.</div>
       </div>
       <div class="ctrl" style="margin-bottom:0">
@@ -188,7 +188,7 @@
       <div class="rrow"><span>Ingreso recuperado al año</span><span class="n" id="r_ano">$84,600</span></div>
       <div class="divider"></div>
       <div class="rrow" style="font-size:13.5px;padding:9px 0;color:#cfe7e7"><span>Plan Starter</span><span id="r_plan">$499</span></div>
-      <div class="rrow" style="font-size:13.5px;padding:9px 0;color:#cfe7e7"><span>Plataformas / mes</span><span id="r_plat">$150</span></div>
+      <div class="rrow" style="font-size:13.5px;padding:9px 0;color:#cfe7e7"><span>Plataformas / mes</span><span id="r_plat">$200</span></div>
       <div class="rrow"><span>Inversión mensual total</span><span class="n" id="r_inv">$649</span></div>
       <div class="rrow"><span>Retorno neto al mes</span><span class="n" id="r_neto">$6,401</span></div>
       <div class="roi-badge">Por cada $1 invertido, recuperas <span class="x" id="r_roi">$10.9</span></div>
@@ -242,7 +242,7 @@
       ingMes=citas*dias*valor; citasMes=citas*dias;
     }
     const ingAno=ingMes*12;
-    const plat=num('plat',150);
+    const plat=num('plat',200);
     const inv=499+plat, neto=ingMes-inv, roi=inv>0?ingMes/inv:0;
     $('r_mes').textContent=money(ingMes);
     $('r_citasMes').textContent=Math.round(citasMes);
